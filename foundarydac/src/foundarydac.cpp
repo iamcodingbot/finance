@@ -1,5 +1,20 @@
 #include <foundarydac.hpp>
 
+ACTION foundarydac::updateCR() {
+
+  // if total votes more than 66%, then update.
+  // same, same -.5, same + .5
+  // if no cr change then stays voted
+  // option1, option2, option3
+  // delete individual entries
+  // update voting balance
+}
+// cr, voted timestamp
+// 100 , 99.5
+// 99.5(), 100(), 99()
+// 
+
+
 ACTION foundarydac::updatecr(double newcr) {
   require_auth(get_self());
   crvalue_table _crvalue(get_self(), get_self().value);

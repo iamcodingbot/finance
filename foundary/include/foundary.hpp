@@ -56,6 +56,8 @@ CONTRACT foundary : public contract {
     };
     typedef eosio::multi_index<name("bricktxn"), bricktxn> bt_table;
 
+    void handledeposit(name from, name to, asset quantity, string memo);
+
     void transfer_from_self(name to, extended_asset e_asset, string memo);
 
     double get_mud_usdt_price();

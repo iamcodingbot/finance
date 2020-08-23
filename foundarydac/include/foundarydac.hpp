@@ -34,4 +34,24 @@ CONTRACT foundarydac : public contract {
       auto primary_key() const { return id; }
     };
     typedef multi_index<name("crvalue"), crvalue> crvalue_table;
+
+    TABLE crvote {
+      uint64_t id;
+      string option1;
+      string option2;
+      string option3;
+      uint64_t vote1;
+      uint64_t vote2;
+      uint64_t vote3;
+    }
+    typedef multi_index<name("crvote"), crvote> crvote_table;
+
+    TABLE voterecord {
+      uint64_t id;
+      name from;
+      uint64_t amount;
+      string option;
+    }
+    typedef multi_index<name("voterecord"), voterecord> voterecord_table;
+
 };
