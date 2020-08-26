@@ -58,40 +58,12 @@
             ]
         },
         {
-            "name": "crvalue",
-            "base": "",
-            "fields": [
-                {
-                    "name": "id",
-                    "type": "uint64"
-                },
-                {
-                    "name": "key",
-                    "type": "string"
-                },
-                {
-                    "name": "value",
-                    "type": "float64"
-                }
-            ]
-        },
-        {
             "name": "subcoll",
             "base": "",
             "fields": [
                 {
                     "name": "ext_collateral_asset",
                     "type": "extended_asset"
-                }
-            ]
-        },
-        {
-            "name": "updatecr",
-            "base": "",
-            "fields": [
-                {
-                    "name": "newcr",
-                    "type": "float64"
                 }
             ]
         },
@@ -127,11 +99,6 @@
             "ricardian_contract": ""
         },
         {
-            "name": "updatecr",
-            "type": "updatecr",
-            "ricardian_contract": ""
-        },
-        {
             "name": "updatelimit",
             "type": "updatelimit",
             "ricardian_contract": ""
@@ -141,13 +108,6 @@
         {
             "name": "collaterals",
             "type": "collaterals",
-            "index_type": "i64",
-            "key_names": [],
-            "key_types": []
-        },
-        {
-            "name": "crvalue",
-            "type": "crvalue",
             "index_type": "i64",
             "key_names": [],
             "key_types": []
