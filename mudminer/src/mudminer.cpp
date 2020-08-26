@@ -1,6 +1,6 @@
 #include <mudminer.hpp>
 
-ACTION mudminer::blp(name from, name to, asset quantity, string memo) {
+ACTION mudminer::bricklp(name from, name to, asset quantity, string memo) {
   require_auth(from);
   action{
     permission_level{get_self(), name("active")},
@@ -38,7 +38,7 @@ ACTION mudminer::claimblp(name from, name to, asset quantity, string memo) {
   // if calc on going, then block claiming
 }
 
-ACTION mudminer::mlp(name from, name to, asset quantity, string memo) {
+ACTION mudminer::mudlp(name from, name to, asset quantity, string memo) {
   require_auth(from);
   // issue vote1 token
   // transfer to other apart from mudminer
@@ -63,11 +63,14 @@ ACTION mudminer::claimeosbri(name from, name to, asset quantity, string memo) {
 }
 
 ACTION mudminer::startdiv() {
-
+  // 100 weight
+  // distribution among various pools
+  // each pool total
+  // all pool total
+  // 
 }
 
 ACTION mudminer::creatediv() {
-
   // reward can be claimed every hour.
   // only if tokens are staked at beginning of hour.
   // update claim table
