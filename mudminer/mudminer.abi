@@ -1,0 +1,124 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "claim",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "ext_asset",
+                    "type": "extended_asset"
+                }
+            ]
+        },
+        {
+            "name": "creatediv",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "enddiv",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "staked",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "contract",
+                    "type": "name"
+                },
+                {
+                    "name": "stake",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "startdiv",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "uservote",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "contract",
+                    "type": "name"
+                },
+                {
+                    "name": "sym",
+                    "type": "symbol"
+                },
+                {
+                    "name": "up",
+                    "type": "uint64"
+                },
+                {
+                    "name": "down",
+                    "type": "uint64"
+                },
+                {
+                    "name": "same",
+                    "type": "uint64"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "claim",
+            "type": "claim",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "creatediv",
+            "type": "creatediv",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "enddiv",
+            "type": "enddiv",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "startdiv",
+            "type": "startdiv",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "staked",
+            "type": "staked",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "uservote",
+            "type": "uservote",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}
