@@ -14,7 +14,7 @@ CONTRACT mudminer : public contract {
     [[eosio::on_notify("evolutiondex::transfer")]]
     void receivealcorlp(name from, name to, asset quantity, string memo);
 
-    ACTION claim(name from, extended_asset ext_asset);
+    ACTION claimlp(name from, extended_asset ext_asset);
 
     ACTION startdiv();
 
@@ -27,6 +27,8 @@ CONTRACT mudminer : public contract {
       uint64_t id;
       name contract;
       asset stake;
+      asset stakereward;
+      uint64_t cycle;
       auto primary_key() const {return id;}
       uint64_t contract_key() const {return contract.value;}
     };

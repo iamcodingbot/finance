@@ -64,7 +64,7 @@ void mudminer::receivealcorlp(name from, name to, asset quantity, string memo) {
   }
 }
 
-ACTION mudminer::claim(name from, extended_asset ext_asset) {
+ACTION mudminer::claimlp(name from, extended_asset ext_asset) {
   require_auth(from);
 
   uint64_t deposited_amount = 0;
@@ -111,26 +111,28 @@ ACTION mudminer::claim(name from, extended_asset ext_asset) {
   staked_contract_index.modify(staked_contract_itr, from, [&](auto& row) {
     row.stake = new_balance;
   });
+  if(new_balance == 0) {
+    _staked.erase(staked_contract_itr);
+  }
 }
 
 
 ACTION mudminer::startdiv() {
-  // 100 weight
-  // distribution among various pools
-  // each pool total
-  // all pool total
-  // 
+  // mark start of div distribution
+  // issue MUD tokens
+  // getpooldistribution
+  // update cycle number
 }
 
 ACTION mudminer::creatediv() {
-  // reward can be claimed every hour.
-  // only if tokens are staked at beginning of hour.
-  // update claim table
+  //
+  // modify 
+  // 
 }
 
 ACTION mudminer::enddiv() {
-
+  //
 }
 
 
-EOSIO_DISPATCH(mudminer, (claim)(startdiv)(creatediv)(enddiv))
+EOSIO_DISPATCH(mudminer, (claimlp)(startdiv)(creatediv)(enddiv))
