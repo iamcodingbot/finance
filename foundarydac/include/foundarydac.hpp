@@ -8,7 +8,6 @@ CONTRACT foundarydac : public contract {
   public:
     using contract::contract;
 
-    ACTION updatecr(double newcr);
     ACTION addnewcoin(name contract, string symstr, uint8_t precision);
     ACTION updatelimit(uint64_t id, uint64_t newlimit);
     ACTION addcoll(extended_asset ext_collateral_asset);
@@ -27,11 +26,4 @@ CONTRACT foundarydac : public contract {
     typedef multi_index<name("collaterals"), collaterals,
     indexed_by<name("contractkey"), const_mem_fun<collaterals, uint64_t, &collaterals::contract_key>>> collaterals_table;
 
-    TABLE crvalue {
-      uint64_t id;
-      string key;
-      double value;
-      auto primary_key() const { return id; }
-    };
-    typedef multi_index<name("crvalue"), crvalue> crvalue_table;
 };

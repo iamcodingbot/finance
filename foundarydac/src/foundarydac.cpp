@@ -1,21 +1,5 @@
 #include <foundarydac.hpp>
 
-ACTION foundarydac::updatecr(double newcr) {
-  require_auth(get_self());
-  crvalue_table _crvalue(get_self(), get_self().value);
-  auto crvalue_itr = _crvalue.find(1);
-  if (crvalue_itr == _crvalue.end()) {
-    _crvalue.emplace(get_self(), [&](auto& row) {
-      row.id = 1;
-      row.key = "CR";
-      row.value = newcr;
-    });
-  } else {
-    _crvalue.modify(crvalue_itr, get_self(), [&](auto& crvalue) {
-      crvalue.value = newcr;
-    });
-  }
-}
 // add new coin
 ACTION foundarydac::addnewcoin(name contract, string symstr, uint8_t precision) {
   require_auth(get_self());
@@ -90,4 +74,4 @@ ACTION foundarydac::subcoll(extended_asset ext_collateral_asset) {
 }
 
 
-EOSIO_DISPATCH(foundarydac, (updatecr)(addnewcoin)(updatelimit)(addcoll)(subcoll))
+EOSIO_DISPATCH(foundarydac, (addnewcoin)(updatelimit)(addcoll)(subcoll))

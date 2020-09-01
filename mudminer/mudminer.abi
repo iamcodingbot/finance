@@ -4,35 +4,54 @@
     "types": [],
     "structs": [
         {
-            "name": "addcoll",
+            "name": "claim",
             "base": "",
             "fields": [
                 {
-                    "name": "ext_collateral_asset",
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "ext_asset",
                     "type": "extended_asset"
                 }
             ]
         },
         {
-            "name": "addnewcoin",
+            "name": "creatediv",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "enddiv",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "staked",
             "base": "",
             "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
                 {
                     "name": "contract",
                     "type": "name"
                 },
                 {
-                    "name": "symstr",
-                    "type": "string"
-                },
-                {
-                    "name": "precision",
-                    "type": "uint8"
+                    "name": "stake",
+                    "type": "asset"
                 }
             ]
         },
         {
-            "name": "collaterals",
+            "name": "startdiv",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "uservote",
             "base": "",
             "fields": [
                 {
@@ -48,35 +67,15 @@
                     "type": "symbol"
                 },
                 {
-                    "name": "upperlimit",
+                    "name": "up",
                     "type": "uint64"
                 },
                 {
-                    "name": "current",
-                    "type": "uint64"
-                }
-            ]
-        },
-        {
-            "name": "subcoll",
-            "base": "",
-            "fields": [
-                {
-                    "name": "ext_collateral_asset",
-                    "type": "extended_asset"
-                }
-            ]
-        },
-        {
-            "name": "updatelimit",
-            "base": "",
-            "fields": [
-                {
-                    "name": "id",
+                    "name": "down",
                     "type": "uint64"
                 },
                 {
-                    "name": "newlimit",
+                    "name": "same",
                     "type": "uint64"
                 }
             ]
@@ -84,30 +83,37 @@
     ],
     "actions": [
         {
-            "name": "addcoll",
-            "type": "addcoll",
+            "name": "claim",
+            "type": "claim",
             "ricardian_contract": ""
         },
         {
-            "name": "addnewcoin",
-            "type": "addnewcoin",
+            "name": "creatediv",
+            "type": "creatediv",
             "ricardian_contract": ""
         },
         {
-            "name": "subcoll",
-            "type": "subcoll",
+            "name": "enddiv",
+            "type": "enddiv",
             "ricardian_contract": ""
         },
         {
-            "name": "updatelimit",
-            "type": "updatelimit",
+            "name": "startdiv",
+            "type": "startdiv",
             "ricardian_contract": ""
         }
     ],
     "tables": [
         {
-            "name": "collaterals",
-            "type": "collaterals",
+            "name": "staked",
+            "type": "staked",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "uservote",
+            "type": "uservote",
             "index_type": "i64",
             "key_names": [],
             "key_types": []

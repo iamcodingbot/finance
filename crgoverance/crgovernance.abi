@@ -1,0 +1,228 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "addvote",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "extended_voting_asset",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "cr_direction",
+                    "type": "int8"
+                }
+            ]
+        },
+        {
+            "name": "countvotes",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "crvalue",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "key",
+                    "type": "string"
+                },
+                {
+                    "name": "value",
+                    "type": "float64"
+                }
+            ]
+        },
+        {
+            "name": "initialcr",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "reducevote",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "extended_voting_asset",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "cr_direction",
+                    "type": "int8"
+                }
+            ]
+        },
+        {
+            "name": "staked",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "contract",
+                    "type": "name"
+                },
+                {
+                    "name": "stake",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "uservote",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "contract",
+                    "type": "name"
+                },
+                {
+                    "name": "sym",
+                    "type": "symbol"
+                },
+                {
+                    "name": "up",
+                    "type": "uint64"
+                },
+                {
+                    "name": "down",
+                    "type": "uint64"
+                },
+                {
+                    "name": "same",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "votecycle",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "cr_vote_cycle_id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "votestats",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "curr_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "contract",
+                    "type": "name"
+                },
+                {
+                    "name": "sym",
+                    "type": "symbol"
+                },
+                {
+                    "name": "up",
+                    "type": "uint64"
+                },
+                {
+                    "name": "down",
+                    "type": "uint64"
+                },
+                {
+                    "name": "same",
+                    "type": "uint64"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "addvote",
+            "type": "addvote",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "countvotes",
+            "type": "countvotes",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "initialcr",
+            "type": "initialcr",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "reducevote",
+            "type": "reducevote",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "crvalue",
+            "type": "crvalue",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "staked",
+            "type": "staked",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "uservote",
+            "type": "uservote",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "votecycle",
+            "type": "votecycle",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "votestats",
+            "type": "votestats",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}
