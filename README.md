@@ -53,7 +53,7 @@ Each collateral has upper limit for deposits. This limit can be increased via vo
 
 Deposit collateral can generate yield as goverened by MUD/BRICK holders.
 
-## How is the price of stable coin calculated?
+## How is the price of collateral token calculated?
 
 Price of stable coin is calculated using stable.sx smart contract.
 
