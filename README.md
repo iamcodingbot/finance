@@ -5,7 +5,7 @@ Brick finance is two coin system inspired by Frax.finance - https://frax.finance
 There are some differences in implementation -
 1) This implementation pegs the 1 BRICK with 1 USDT.
 2) The prices are driven from liquidity pools.
-3) community unlocks the voting on CR after certain number of MUDs are mined. 
+3) Voting on CR is unlocked after certain number of MUDs are mined. 
 
 ## Tokens 
 
@@ -40,10 +40,10 @@ Subsequently, providing MUD/BRICK for lending on PIZZA others may also mine MUD.
 
 ## Which stable coins are supported as collateral?
 
-Initially USDT is supported in code. There is plan to support other stable coins like VIGOR. 1 USDT worth of VIGOR can be used to mint, 1 BRICK when the CR is 100%. 
+Initially USDT is supported in code. There is plan to support other stable coins like VIGOR. 1 USDT worth of VIGOR can be used to mint 1 BRICK when the CR is 100%. 
 Other stable coins can be included via voting.
 
-## Is there a cap on total number of coins that can be deposited as a collateral?
+## Is there a cap on total number of tokens that can be deposited for a single collateral?
 
 Each collateral has upper limit for deposits. This limit can be increased via voting.
 
