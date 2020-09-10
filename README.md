@@ -12,9 +12,9 @@ There are some differences in implementation -
 
 **MUD** - Mud is the volatile coin in the system. Total mineable supply is 30000 MUD. MUD sent to smart contract for getting BRICK tokens are removed from circulation. When USDT is redeemed, MUD supply is increased. 
 
-## Current Ratio (CR)
+## Current Ratio or Collateral Ratio (CR)
 
-This signifies the ratio at which BRICK can be minted and redeemed. CR can range from 0.5[TODO check the lower value] to 100.0  
+This signifies the ratio at which BRICK can be minted and collateral can be redeemed. CR can range from 0.5[TODO check the lower value] to 100.0  
 
 Varying values of CR controls how the system works.
 
