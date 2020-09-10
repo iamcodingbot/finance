@@ -10,7 +10,7 @@ There are some differences in implementation -
 
 **BRICK** - Brick is the low volatility coin in the system. Total initial supply of BRICK is 1 Billion. [TODO - can this be more than 1 b?] 
 
-**MUD** - Mud is the volatile coin in the system. Total mineable supply is 25000 MUD. MUD sent to smart contract for getting BRICK tokens are removed from circulation. When USDT is redeemed, MUD supply is increased. 
+**MUD** - Mud is the volatile coin in the system. Total mineable supply is 30000 MUD. MUD sent to smart contract for getting BRICK tokens are removed from circulation. When USDT is redeemed, MUD supply is increased. 
 
 ## Current Ratio (CR)
 
@@ -30,7 +30,18 @@ Say when the CR is 90%
 ## How does the CR value change?
 
 After a certain number of MUD is minted, CR voting module is unlocked for BRICK/MUD holders to vote for CR direction (up, down, same). Every 8 hours, CR direction can move by .5% 
-In the subsequent version,  CR by bidding can be implemented. 
+In the subsequent version, CR change by bidding can be implemented. 
 
+## How can MUD be mined?
+
+By providing liquidity at a swap exchange which issues LP tokens, MUD can be mined. Currently, EIDOS and Alcor.exchange are considered.
+
+## Can any other coin be deposited as collateral to redeem mint?
+
+There is plan to support other stable coins like VIGOR. 1 USDT worth of VIGOR can be used to mint, 1 BRICK when the CR is 100%.
+
+## Can the deposited collateral generate yield?
+
+Deposit collateral can generate yield as goverened by MUD/BRICK holders.
 
 **THIS IS AN EXPERIMENTAL IMPLEMENTATION**
