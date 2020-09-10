@@ -35,7 +35,8 @@ In the subsequent version, CR change by bidding can be implemented.
 
 ## How can MUD be mined?
 
-By providing liquidity at a swap exchange which issues LP tokens, MUD can be mined. Currently, EIDOS and Alcor.exchange are considered.
+Initially MUD can be mined by providing liquidity at a swap exchange which issues LP tokens. Currently, EIDOS and Alcor.exchange are coded.
+Subsequently, providing MUD/BRICK for lending on PIZZA others may also mine MUD. MUD mining will go for a limited period of time, till the time vault is developed OR cap of MUD is reached.
 
 ## Which stable coins are supported as collateral?
 
