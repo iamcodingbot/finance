@@ -5,7 +5,7 @@ Brick finance is two coin system inspired by Frax.finance - https://frax.finance
 There are some differences in implementation -
 1) This implementation pegs the 1 BRICK with 1 USDT.
 2) The prices are driven from liquidity pools.
-3) community unlocks the voting on CR after certain number of muds are mined. 
+3) community unlocks the voting on CR after certain number of MUDs are mined. 
 
 ## Tokens 
 
