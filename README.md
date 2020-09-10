@@ -39,7 +39,12 @@ By providing liquidity at a swap exchange which issues LP tokens, MUD can be min
 
 ## Which stable coins are supported as collateral?
 
-Initially USDT is supported in code. There is plan to support other stable coins like VIGOR. 1 USDT worth of VIGOR can be used to mint, 1 BRICK when the CR is 100%.
+Initially USDT is supported in code. There is plan to support other stable coins like VIGOR. 1 USDT worth of VIGOR can be used to mint, 1 BRICK when the CR is 100%. 
+Other stable coins can be included via voting.
+
+## Is there a cap on total number of coins that can be deposited as a collateral?
+
+Each collateral has upper limit for deposits. This limit can be increased via voting.
 
 ## Can the deposited collateral generate yield?
 
