@@ -27,20 +27,20 @@ Say when the CR is 90%
 - Collateral redeem - 1 USDT can be redeemed by sending .90 BRICK and .10 USDT worth of MUD. This MUD is taken out of circulation.
 - Brick mint - 1 Brick can be minted by sending .90 USDT and .10 USDT worth of MUD. New MUD is generated to capture this price.
 
-###### How does the CR value change?
+## How does the CR value change?
 
 After a certain number of MUD is minted, CR voting module is unlocked for BRICK/MUD holders to vote for CR direction (up, down, same). Every 8 hours, CR direction can move by .5% 
 In the subsequent version, CR change by bidding can be implemented. 
 
-###### How can MUD be mined?
+## How can MUD be mined?
 
 By providing liquidity at a swap exchange which issues LP tokens, MUD can be mined. Currently, EIDOS and Alcor.exchange are considered.
 
-###### Can any other coin be deposited as collateral to redeem/mint?
+## Can any other coin be deposited as collateral to redeem/mint?
 
 There is plan to support other stable coins like VIGOR. 1 USDT worth of VIGOR can be used to mint, 1 BRICK when the CR is 100%.
 
-###### Can the deposited collateral generate yield?
+## Can the deposited collateral generate yield?
 
 Deposit collateral can generate yield as goverened by MUD/BRICK holders.
 
