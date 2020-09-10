@@ -1,22 +1,21 @@
 # finance
 
+Inspired by Frax.finance's whitepaper.
 
+It is two coin system. Stable coin BRICK and investment coin MUD.
 
-Foundary Contract -   
-To get new brick user calls a txn which consists of -
+System is controlled by collateral ratio(CR), initial value set to 100%. 
 
-1)starttxn action.
-2)transfer USDT/VIGOR action. receiveusdt/receivevigor methods are called on these trasnfers,
-3)transfer MUD action. receivemud method is called on the transfer.
-4_settle
+At CR = 100% -
+  to get 1 BRICK user has to deposit 1 USDT. 
+  User can deposit 1 BRICK and get 1 USDT back.
 
-all these txn work on a single row in table bricktxn. this table maintains changes after every action.
+When CR becomes less than 100%, say 99%, -
+  to get 1 BRICK user needs to deposit .99 USDT and .01 USDT worth of MUD. This MUD is burnt.
+  on selling 1 BRICK user get .99 USDT and .01 worth of MUD at this time. This is newly minted MUD.
+  
+LP in EOS/BRICK and EOS/MUD pair will be rewarded with MUD tokens.
 
-To redeem brick, user calls transfer brick action. receivebrick action is called on transfer.
+Goal of the project is to make a fractional reserve system like Federal reserve. Dollar was initially backed by Gold and then the fractional reserve kicked in.
 
-brickissuer, mudissuer - handles issue, retire, xfer of BRICK and MUD.
-
-foundarydac- this has updateCR. but i will modify this be updated based on user voting.
-
-
-LP tokens from Alcor, Eidos are supported for MUD mining. 
+In the initial release CR will be governed by MUD/BRICK holders.
