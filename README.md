@@ -1,6 +1,6 @@
 # Brick finance
 
-Brick finance is two coin system inspired by Frax.finance - 
+Brick finance is two coin system inspired by Frax.finance - https://frax.finance/whitepaper/
 
 There are some differences in implementation -
 1) Instead of pegging the token with 1$, this implementation pegs the system with 1 USDT.
