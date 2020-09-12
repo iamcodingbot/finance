@@ -1,11 +1,13 @@
 # Brick finance
 
-Brick finance is two coin system inspired by Frax.finance - https://frax.finance/whitepaper/
+Brick finance is two coin ecosystem inspired by Frax.finance - https://frax.finance/whitepaper/
 
 There are some differences in implementation -
 1) This implementation pegs 1 BRICK with 1 USDT.
 2) MUD, BRICK and stable coins prices are calculated from liquidity pools.
 3) CR change is voting based initially. Voting on CR is unlocked after certain number of MUDs are mined. 
+
+Also brick is an eosio implementation.
 
 ## Tokens 
 
