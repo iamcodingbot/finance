@@ -5,9 +5,8 @@ Brick finance is two coin ecosystem inspired by Frax.finance - https://frax.fina
 There are some differences in implementation -
 1) This implementation pegs 1 BRICK with 1 USDT.
 2) MUD, BRICK and stable coins prices are calculated from liquidity pools.
-3) CR change is voting based initially. Voting on CR is unlocked after certain number of MUDs are mined. 
 
-Also brick is an eosio implementation.
+Brick is an eosio implementation.
 
 ## Tokens 
 
@@ -27,15 +26,14 @@ Varying values of CR control how brick, mud and collateral interact.
 
 **When CR < 100% :**
 Say when the CR is 90%
-- Collateral redeem smart contract - 1 USDT worth of collateral can be redeemed by sending .90 BRICK and .10 USDT worth of MUD. This MUD is taken out of circulation.
-- Brick mint smart contract - 1 Brick can be minted by sending .90 USDT worth of collateral and .10 USDT worth of MUD. New MUD is generated to capture this price.
+- Collateral redeem smart contract - 1 BRICK can be redeemed to get .90 USDT worth of collateral and .10 USDT worth of MUD. New MUD is generated to capture this price.
+- Brick mint smart contract - 1 Brick can be minted by sending .90 USDT worth of collateral and .10 USDT worth of MUD. This MUD is taken out of circulation.
 
 Collateral redeem smart contract charges 0.05% fees. This fees can be used by MUD/BRICK holders to use for anything.
 
 ## How does the CR value change?
 
-After a certain number of MUD is minted, CR voting module is unlocked for BRICK/MUD holders to vote for CR direction (up, down, same). Every 8 hours, CR direction can move by .5% in either direction (increase/decrease from current value or stay the same)
-In the subsequent version, CR change by bidding can be implemented. 
+The CR increase/decrease based on decrease/increase of BRICK supply. CR value is inversely related to BRICK supply.
 
 ## How can MUD be mined?
 
