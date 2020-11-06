@@ -75,8 +75,12 @@ T is target supply such that c = 0
 i.e. c = 0 when s >= T
 
 Relation between s, c can be calculated via combination of following equations -
+
 c = 0                   WHEN s > T
+
 c = 100                 WHEN s =< M
+
 k * c pow E + M = s     WHEN s <= T 
+
 
 **THIS IS AN EXPERIMENTAL IMPLEMENTATION**
