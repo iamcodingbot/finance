@@ -61,4 +61,16 @@ Price of stable coin is calculated using stable.sx smart contract.
 
 Price of MUD and BRICK are calculated using volume weighted price from multiple swaps smart exchanges. 
 
+# CR calculation
+
+Let CR be represented by c
+Let Supply at a CR represented by s
+
+Supply till which CR remains 100 be represted by M
+Let E be Euler constant. It can be any integer. 
+
+k * c pow E + M = s
+
+
+
 **THIS IS AN EXPERIMENTAL IMPLEMENTATION**
