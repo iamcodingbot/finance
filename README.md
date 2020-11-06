@@ -63,14 +63,19 @@ Price of MUD and BRICK are calculated using volume weighted price from multiple 
 
 # CR calculation
 
-Let CR be represented by c
-Let Supply at a CR represented by s
+Let CR be represented by c.
+Let Supply at a CR represented by s.
 
-Supply till which CR remains 100 be represted by M
+Supply till which CR remains 100 be represted by M.
 Let E be Euler constant. It can be any integer. 
 
 k * c pow E + M = s
 
+Also, c = 100 when s <= M
 
+T is target supply such that c = 0
+i.e. c = 0 when s >= T
+
+Above constraints are used to calculation value of "k", when supply is less than T.
 
 **THIS IS AN EXPERIMENTAL IMPLEMENTATION**
