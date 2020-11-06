@@ -69,13 +69,14 @@ Let Supply at a CR represented by s.
 Supply till which CR remains 100 be represted by M.
 Let E be Euler constant. It can be any integer. 
 
-k * c pow E + M = s
-
 Also, c = 100 when s <= M
 
 T is target supply such that c = 0
 i.e. c = 0 when s >= T
 
-Above constraints are used to calculation value of "k", when supply is less than T.
+Relation between s, c can be calculated via combination of following equations -
+c = 0                   WHEN s > T
+c = 100                 WHEN s =< M
+k * c pow E + M = s     WHEN s <= T 
 
 **THIS IS AN EXPERIMENTAL IMPLEMENTATION**
