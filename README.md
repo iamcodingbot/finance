@@ -1,12 +1,7 @@
 # Brick finance
 
-Brick finance is two coin ecosystem inspired by Frax.finance - https://frax.finance/whitepaper/
+Brick finance is a EOSIO based ecosystem which includes a new stable coin (BRICK), a new collateral token(MUD) and an existing on chain stable coin (USDT). The goal is to create a stable coin (BRICK) that holds its peg to an existing onchain stable coin(USDT). Total value of BRICK is 100% backed by MUD and USDT at any point in time. The system bootstraps by 100% backing from USDT and allows for 100% backing from MUD. In the intermediate stage, system allows for partial backing from USDT and partial backing from MUD (say 60% USDT and 40% MUD, the sum is always 100%). This ratio is governed by equation mentioned later in the document. To create a stable system, equation takes into factor total supply of BRICK. 
 
-There are some differences in implementation -
-1) This implementation pegs 1 BRICK with 1 USDT.
-2) MUD, BRICK and stable coins prices are calculated from liquidity pools.
-
-Brick is an eosio implementation.
 
 ## Tokens 
 
@@ -84,3 +79,7 @@ k * c pow E + M = s     WHEN s <= T
 
 
 **THIS IS AN EXPERIMENTAL IMPLEMENTATION**
+
+# Inspirations -
+Frax.finance - https://frax.finance/whitepaper/
+Amplforth - https://www.ampleforth.org/
