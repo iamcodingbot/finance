@@ -1,6 +1,6 @@
 # Brick finance
 
-Brick finance is a EOSIO based system which includes a new stable coin (BRICK), a value accrual system generated collateral token(MUD) AND an existing on chain stable coin (USDT). System creates a stable coin (BRICK) that holds its peg to an existing onchain stable coin(USDT). Total value of BRICK is 100% backed by MUD and USDT at any point in time. System starts with 100% collateral backing from USDT and allows for 100% collateral backing from MUD. System allows for partial collateral backing from USDT and partial collateral backing from MUD (say 60% USDT and 40% MUD, the sum is always 100%). This ratio is calculated based on an equation mentioned later in the document. To create a stable system, equation takes into factor point in time supply of BRICK. 
+Brick finance is a EOSIO based system which includes a new stable coin (BRICK), a new collateral token (MUD) AND an existing on chain stable coin (USDT). System attempts to create a stable coin (BRICK) that holds its peg to an existing onchain stable coin(USDT). Total value of BRICK is 100% backed by MUD and USDT at any point in time. System starts with 100% collateral backing from USDT and allows for 100% collateral backing from MUD. System allows for partial collateral backing from USDT and partial collateral backing from MUD (say 60% USDT and 40% MUD, the sum is always 100%). This ratio is calculated based on an equation mentioned later in the document. To create a stable system, equation takes into factor point in time supply of BRICK. 
 
 
 ## Tokens 
