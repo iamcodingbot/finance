@@ -1,28 +1,29 @@
 # Brick finance
 
-Brick finance is a EOSIO based ecosystem which includes a new stable coin (BRICK), a new collateral token(MUD) and an existing on chain stable coin (USDT). The goal is to create a stable coin (BRICK) that holds its peg to an existing onchain stable coin(USDT). Total value of BRICK is 100% backed by MUD and USDT at any point in time. The system bootstraps by 100% backing from USDT and allows for 100% backing from MUD. In the intermediate stage, system allows for partial backing from USDT and partial backing from MUD (say 60% USDT and 40% MUD, the sum is always 100%). This ratio is governed by equation mentioned later in the document. To create a stable system, equation takes into factor total supply of BRICK. 
+Brick finance is a EOSIO based system which includes a new stable coin (BRICK), a value accrual system generated collateral token(MUD) AND an existing on chain stable coin (USDT). System creates a stable coin (BRICK) that holds its peg to an existing onchain stable coin(USDT). Total value of BRICK is 100% backed by MUD and USDT at any point in time. System starts with 100% collateral backing from USDT and allows for 100% collateral backing from MUD. System allows for partial collateral backing from USDT and partial collateral backing from MUD (say 60% USDT and 40% MUD, the sum is always 100%). This ratio is calculated based on an equation mentioned later in the document. To create a stable system, equation takes into factor point in time supply of BRICK. 
 
 
 ## Tokens 
 
-**BRICK** - Brick is the low volatility coin in the system. Total initial supply of BRICK is 1 Billion. [TODO - can this be more than 1 b?] 
+**BRICK** - Brick is the stable coin in the system. Max supply of BRICK is coded to be 1 Billion. [TODO - can this be more than 1 b?] 
 
-**MUD** - Mud is the volatile coin in the system. Total mineable supply is 30000 MUD. MUD sent to smart contract for getting BRICK tokens are removed from circulation. When collateral is redeemed, MUD supply is increased. 
+**MUD** - Mud is a value accrual system generated collateral token in the system. Max supply is 10 Million. MUD is collateralized along with USDT to generate BRICK tokens is removed from circulation. When BRICK is returned, USDT along with newly created MUD is returned as collateral. The ratio (Ratio of Collaterals) in which MUD and USDT tokens are accepted as collateral and returned as collateral is explained in the next section. 
 
-## Current Ratio or Collateral Ratio (CR)
+**USDT** - Usdt is on chain stable coin that is used as a collateral.
+## Ratio of Collaterals (ROC)
 
-This signifies the ratio at which BRICK can be minted and collateral can be redeemed. CR can range from 0.5[TODO check the lower value] to 100.0  
+This signifies the ratio of collaterals used for minting and returning BRICK. CR can range from 0.5[TODO check the lower value] to 100.0  
 
-Varying values of CR control how brick, mud and collateral interact.
+Varying values of ROC control how brick, mud and collateral interact. Below
 
-**When CR is 100% :**
-- Collateral redeem smart contract  - 1 Brick can redeem 1 USDT worth of collateral from a smart contract.
-- Brick mint smart contrat - 1 Brick can be minted by sending 1 USDT worth of collateral to a smart contract.
+**When ROC is 100% :**
+- Brick mint - 1 Brick can be minted by sending 1 USDT to a smart contract.
+- Brick return  - 1 Brick can redeem 1 USDT from a smart contract.
 
-**When CR < 100% :**
+**When ROC < 100% :**
 Say when the CR is 90%
-- Collateral redeem smart contract - 1 BRICK can be redeemed to get .90 USDT worth of collateral and .10 USDT worth of MUD. New MUD is generated to capture this price.
-- Brick mint smart contract - 1 Brick can be minted by sending .90 USDT worth of collateral and .10 USDT worth of MUD. This MUD is taken out of circulation.
+- Brick return - 1 BRICK can be redeemed to get .90 USDT worth of collateral and .10 USDT worth of MUD. New MUD is generated to capture this price.
+- Brick mint - 1 Brick can be minted by sending .90 USDT worth of collateral and .10 USDT worth of MUD. This MUD is taken out of circulation.
 
 Collateral redeem smart contract charges 0.05% fees. This fees can be used by MUD/BRICK holders to use for anything.
 
